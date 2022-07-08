@@ -9,20 +9,13 @@ body{
     background-color: #1C1C28;
     z-index: 0;
     font-family: 'Roboto Condensed', sans-serif;
-    
-}
-.grid{
-    left: 0;
     background-image:
-    repeating-linear-gradient(#393953 0 1px, transparent 1px 100%),
-    repeating-linear-gradient(90deg, #393953 0 1px , transparent 1px 100%);
+    repeating-linear-gradient(rgba(57, 57, 83, 0.4) 0 1px, transparent 1px 100%),
+    repeating-linear-gradient(90deg, rgba(57, 57, 83, 0.4) 0 1px , transparent 1px 100%);
     background-size: 25px 25px;
-    border-radius: 1rem;
-    height:630%;
-    width: 100%;
-    position: absolute;
-    opacity: 0.4;
-    z-index: -2;
+}
+body .inner{
+    display: none;
 }
 .header{
     height: 4rem;
@@ -32,7 +25,7 @@ body{
 .header-inner{
     height: 48px;
     width: 100%;
-    margin: 0 20px;
+    margin: 0 1.5rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -45,12 +38,17 @@ body{
     margin-right: auto;
 }
 .button{
-    height: 40px;
-    width: 66px;
-    border-radius: 7.29px;
+    border-radius: 8px;
     border: none;
     background-color: #18A0FB;
     cursor: pointer;
+}
+.button .short-name{
+    display: none;
+}
+.btn{
+    padding: 0 14px;
+    line-height: 2.5rem;
 }
 a{
     text-decoration: none;
@@ -118,40 +116,42 @@ a{
     flex-wrap: wrap;
     justify-content: center;
 }
+.grants{
+    padding-bottom: 20px;
+    background-image: url(/images/1.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
 .button23{
     width: 100%;
     margin-top: 1rem;
 }
 .button2{
-    height: 40px;
+    line-height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    border-radius: 7.29px;
+    border-radius: 8px;
     margin-bottom: 1rem;
     background-color: #393953;
     border: none;
     cursor: pointer;
+    font-size: 0.9rem;
 
 }
 .button3{
-    height: 40px;
+    line-height: 2.5rem;
+    border-radius: 8px;
+    background-color: #18A0FB;
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    border-radius: 7.29px;
-    background-color: #18A0FB;
-    border: none;
-    cursor: pointer;
-    background-image: url('..//images/rightarrow.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position: 72%;
 }
-.texto{
-    margin-right: 5%;
+.rightarrow{
+    margin-left: 10px;
 }
 .inside2{
     margin-top: 2.5rem;
@@ -239,25 +239,22 @@ a{
     letter-spacing: 1px;
 }
 .viewall{
-    width: 100%;
-    height: 24px;
+    line-height: 1.5rem;
     border: 1px dotted #18A0FB;
     margin-top: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/images/arrowright.png');
-    background-repeat: no-repeat;
-    background-position: center right 35px;
-    background-color: transparent;
+    width: 100%;
     cursor: pointer;
-}
-.textot{
     color: #18A0FB;
     font-weight: 200;
     font-size: 0.8rem;
     letter-spacing: 1px;
-    margin-right: 10px;
+    padding-right: 10px;
+}
+.arrowright{
+    margin-left: 10px;
 }
 .inside4{
     margin-top: 3rem;
@@ -270,6 +267,15 @@ a{
     box-sizing: border-box;
     background-color: #393953;
     margin-bottom: 4.5rem;
+}
+.fer3{
+    display: none;
+}
+.fer2{
+    display: none;
+}
+.br{
+    display: flex;
 }
 .content{
     margin: 1.5rem;
@@ -382,23 +388,17 @@ a{
     line-height: 1.4rem;
 }
 .readr{
-    height: 24px;
+    line-height: 1.5rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    background-color: transparent;
-    background-image: url('/images/arrowright.png');
-    background-repeat: no-repeat;
-    background-position: center right 40px;
     cursor: pointer;
-}
-.read{
     letter-spacing: 1px;
     font-size: 0.8rem;
     color: #18A0FB;
-    margin-right: 20px;
+    padding-right: 10px;
 }
 .inside6{
     min-height: 480px;
@@ -437,7 +437,7 @@ a{
     letter-spacing: 1px;
     font-size: 0.7rem;
 }
-.blogpost2{
+.inside7{
     min-height: 362px;
     background-color: #393953;
     border-radius: 1rem;   
@@ -496,6 +496,7 @@ a{
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    justify-content: center;
 }
 .freq{
     height: 64px;
@@ -822,23 +823,18 @@ a{
     margin-bottom: 2.5rem;
 }
 .applyfor{
-    height: 40px;
+    line-height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    border-radius: 7.29px;
-    background-image: url(/images/arrowright.png);
-    background-repeat: no-repeat;
-    background-position: center right 23%;
+    border-radius: 8px;
+    background-color: white;
     cursor: pointer;
     border: none;
-}
-#applyfor{
     font-size: 0.9rem;
     color: #6966FF;
     font-weight: 550;
-    margin-left: -10%;
 }
 .footer{
     margin: 2.5rem 1.5rem;
@@ -915,4 +911,473 @@ a{
     position: absolute;
     bottom: 0;
     word-spacing: 2rem;
+}
+@media (min-width:1200px) {
+
+    .header{
+        height: auto;
+    }
+    .header-inner{
+        display: flex;
+        padding: 1.5rem 2rem;
+        margin: 0;
+    }
+    .img{
+        width: 120px;
+        height: 72px;
+        margin-right: auto;
+    }
+    body .inner{
+        display:flex;
+        padding: 0;
+        border-radius: 8px;
+        padding: 12px 16px;
+        color: #C8C7D8;
+        font-weight: 200;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+    body .inner:hover{
+        background-color: #4F4C64;
+        color: white;
+    }
+    .hamburger{
+        display: none;
+    }
+    .button .short-name{
+        display: inline-block;
+    }
+    .btn{
+        line-height: 2.5rem;
+        margin-left: 12px ;
+    }
+    .main{
+        margin: 0;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .grants{
+        padding-bottom: 15px;
+        padding-right: 10px;
+        padding-left: 10px;
+        background-image: url(/images/type1.png);
+        background-size: contain;
+    }
+    .inside{
+        margin: 32px;
+        width: 55vw;
+        max-width: 800px;
+        font-size: 4rem ;
+    }
+
+    .button23{
+        width: 392px;
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-end;
+
+    }
+    .button2{
+        width: 180px;
+        line-height: 3rem;
+        margin: 0;
+    }
+    .button3{
+        height: 3rem;
+        width: 170px;
+        margin: 0;
+    }
+
+    .inside2{
+        width: 55vw;
+        max-width: 800px;
+    }
+    .frame{
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+    .frame1{
+        margin: 0;
+    }
+    .frame2{
+        margin: 0;
+    }
+    .boxer{
+        margin-top: 400px;
+        height: 150px;
+    }
+    .boxer2{
+        margin-top: 40%;
+        margin-top: 550px;
+        background-image: linear-gradient(#1C1C28, transparent 200px);
+    }
+
+    .main2{
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .inside3{
+        width: 40vw;
+    }
+    .viewall{
+        border: none;
+        width: fit-content;
+        font-size: 1rem;
+    }
+    .arrow{
+        height: 100px;
+    }
+    .boxer3{
+        margin-top: 200px;
+        height: 600px;
+    }
+    .boxer4{
+        margin-top: 800px;
+        height: 200px;
+    }
+    .labe{
+        font-size: 2rem;
+    }
+    .lore{
+        font-size: 1rem;
+    }
+    .inside4{
+        margin: 80px 0;
+        display: flex;
+        background-image: none;
+        background-color: transparent;
+        width: 85vw;
+        max-width: 1224px;
+    }
+    .fer{
+        width: 33.3%;
+    }
+    .fer .guygirl{
+        display: flex;
+        margin: 24px;
+        margin-top: 135px;   
+    }
+    .fer2{
+        display: block;
+        width: 33.3%;
+        margin: 0 24px;
+    }
+    .cap{
+        border-radius: 16px;
+        background-color: #232334;
+        height: 180px;
+    }
+    .fer3{
+        display: block;
+        width: 33.3%;
+    }
+    .telize{
+        border: 1px solid transparent;
+        background-color: #393953;
+        border-radius: 16px;
+        background-image: linear-gradient(#393953, #393953),
+        linear-gradient(180deg, #232334, transparent);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-sizing: border-box;
+        height: 560px;
+    }
+    .telize:hover{
+        background-color:#4F4C64;
+        background-image: none;
+    }
+    .br{
+        display: none;
+    }
+    .content2{
+        margin: 1.5rem;
+        padding-bottom: 2rem;
+    }
+    .content2 .fu{
+        margin-top: 8px;
+    }
+    .content2 .fun{
+        margin-top: 8px;}
+
+    .main3{
+        margin: 0;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .inside5{
+        width: 40vw;
+        max-width: 600px;
+        margin: 80px 0;
+    }
+    .inside5 h2{
+        font-size: 2rem;
+    }
+    .inside5 .ins{
+        font-size: 1rem;
+    }
+    .inside5 .readr{
+        font-size: 1rem;
+    }
+    .inside5 .new{
+        padding-top: 30px;
+        padding-right: 30px;
+        background-size: 50%;
+    }
+    .flow{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        width: 55vw;
+        max-width: 800px;
+        height: 440px;
+        margin-bottom: 80px;
+    }
+    .inside6{
+        margin: 0;
+        width: 49%;
+        min-height: 0;
+        height: 440px;
+        position: relative;
+    }
+    .inside6:hover{
+        background-color: #4F4C64;
+        background-image: none;
+    }
+    .inside7:hover{
+        background-color: #4F4C64;
+        background-image: none;
+    }
+    .inside7{
+        margin: 0;
+        width: 49%;
+        height: 440px;
+    }
+    .jan{
+        position: absolute;
+        bottom: 20px;
+        margin: 0 1.5rem;
+        height: 20px;
+        color:#C8C7D8 ;
+        letter-spacing: 1px;
+        font-size: 0.7rem;
+    }
+    .boxer5{
+        margin-top: 300px;
+        height: 500px;
+    }
+    .main4{
+        margin: 0;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .inside8{
+        margin: 80px 0;
+        width: 40vw;
+        max-width: 600px;
+    }
+    .inside8 h2{
+        font-size: 2rem;
+        height: auto;
+    }
+    .que{
+        background-size: 100%;
+        padding-left: 10px;
+    }
+    .inside8 .br2{
+        display: none;
+    }
+    .inside8 p{
+        height: auto;
+    }
+    .freq{
+        padding-bottom: 24px;
+    }
+    .inside9{
+        width: 55vw;
+        max-width: 800px;
+        margin-bottom: 80px;
+    }
+    .wow{
+        padding: 24px 0;
+        font-size: 1rem;
+    }
+    #how{
+        font-size: 1rem;
+    }
+    #can{
+        font-size: 1rem;
+    }
+    #howwill{
+        font-size: 1rem;
+    }
+    #whattype{
+        font-size: 1rem;
+    }
+    #whatis{
+        font-size: 1rem;
+    }
+    #howcan{
+        font-size: 1rem;
+    }
+    #howoften{
+        font-size: 1rem;
+    }
+    .boxer7{
+        margin-top: 200px;
+        height: 500px;
+    }
+    .boxer8{
+        margin-top: 700px;
+    }
+    .main5{
+        margin: 0;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .inside10{
+        margin: 80px 0;
+        width: 40vw;
+        max-width: 600px;
+    }
+    .inside10 h2{
+        font-size: 2rem;
+        height: auto;
+    }
+    .inside10 p{
+        height: auto;
+        font-size: 1rem;
+    }
+    .pro{
+        background-size: 100%;
+    }
+    .inside11{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        width: 85vw;
+        max-width: 1200px;
+        position: relative;
+    }
+    .curved1{
+    top: 10%;
+    left: 27%;
+    transform: rotate(-90deg);
+    }
+    .curved2{
+    top: 75%;
+    left: 66%;
+    transform: rotate(-90deg);
+    }
+    .number1{
+        width: 31%;
+        margin: 0;
+        height: 480px;
+    }
+    .number2{
+        width: 31%;
+        margin: 0;
+        height: 480px;
+    }
+    .number3{
+        width: 31%;
+        margin: 0;
+        height: 480px;
+    }
+    .boxer9{
+        margin-top: 100px;
+        height: 650px;
+    }
+    .boxer10{
+        margin-top: 750px;
+    }
+    .main6{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+    }
+    .inside12{
+        margin: 80px 0;
+        width: 85vw;
+        max-width: 1224px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .texting{
+        height: 168px;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .texting .have{
+        font-size: 1rem;
+    }
+    .texting .lets{
+        font-size: 2rem;
+    }
+    .applyfor{
+        width: 169px;
+        font-size: 1rem;
+        line-height: 48px;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+    }
+    .footer{
+        display: flex;
+        flex-flow: row;
+        height: 60px;
+        width: 85vw;
+        max-width: 1224px;
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+    .logo{
+        height: 100%;
+        margin-right: 32px;
+    }
+    .underfooter{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+    }
+    .logosection{
+        right: 0;
+        height: 100%;
+        width: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .tet{
+        margin: 0;
+    }
+    #about{
+        margin: 0;
+    }
+    #FAQ{
+        margin: 0;
+    }
+    #brand{
+        margin: 0;
+    }
+    .twitter{
+        height: 20px;
+    }
+    .discord{
+        height: 20px;
+    }
 }
